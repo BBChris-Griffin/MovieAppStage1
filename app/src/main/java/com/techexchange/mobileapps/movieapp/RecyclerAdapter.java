@@ -63,30 +63,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         context.startActivity(intent);
     }
 
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        ImageView imageView;
-//        Movie movies = getItem(position);
-//        RelativeLayout relativeLayout = new RelativeLayout(context);
-//        relativeLayout.setLayoutParams(new ViewGroup.LayoutParams(200, 300));
-//        if (convertView == null) {
-//            // if it's not recycled, initialize some attributes
-//            imageView = new ImageView(context);
-//            imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-//            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-//            imageView.setAdjustViewBounds(true);
-//            relativeLayout.addView(imageView);
-//        } else {
-//            imageView = (ImageView) convertView;
-//        }
-//
-//        //load data into the ImageView using Picasso
-//        Picasso.with(context).load(MOVIE_URL + movies.getPosterPath())
-//                .placeholder(R.drawable.image_placeholder)
-//                .into(imageView);
-//
-//        return imageView;
-//    }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 

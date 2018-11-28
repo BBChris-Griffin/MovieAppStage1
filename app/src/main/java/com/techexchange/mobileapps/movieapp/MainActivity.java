@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TAG = "Deez";
+    public static final String TAG = "Taggefied";
     private boolean displayView = false;
     String popularMoviesURL, ratedMoviesURL;
     ArrayList<Movie> mPopularList = new ArrayList<>();
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ButterKnife.bind(this);
         new MovieGetter().execute();
         while(!displayView) {
             Log.d(TAG, "Loading");
@@ -92,12 +91,6 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putInt("CurrentList", savedList);
     }
-
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        InitRecyclerView(mPopularList);
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
