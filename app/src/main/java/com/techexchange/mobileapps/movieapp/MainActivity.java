@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
                 if(NetworkUtils.networkStatus(MainActivity.this)){
                     mPopularList = NetworkUtils.fetchData(popularMoviesURL); //Get popular movies
                     mTopTopRatedList = NetworkUtils.fetchData(ratedMoviesURL); //Get top rated movies
-                    Log.d(TAG, String.valueOf(mPopularList.size()));
 
                 }else{
                     Toast.makeText(MainActivity.this,"No Internet Connection", Toast.LENGTH_LONG).show();

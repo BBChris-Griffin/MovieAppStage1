@@ -29,8 +29,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public RecyclerAdapter(Context context, ArrayList<Movie> movieList) {
         this.movieList = movieList;
         this.context = context;
-        Log.d(TAG, String.valueOf(movieList.size()));
-
     }
 
     @NonNull
