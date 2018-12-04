@@ -26,13 +26,11 @@ public class NetworkUtils {
 
     public static ArrayList<Movie> fetchData(String url) throws IOException {
         ArrayList<Movie> movies = new ArrayList<Movie>();
-        Log.d(TAG, "hitttt");
 
         try {
             URL new_url = new URL(url); //create a url from a String
             HttpURLConnection connection = (HttpURLConnection) new_url.openConnection(); //Opening a http connection  to the remote object
             connection.connect();
-            Log.d(TAG, "hi");
 
             InputStream inputStream = connection.getInputStream(); //reading from the object
             String results = convertStreamToString(inputStream);  //IOUtils to convert inputstream objects into Strings type
@@ -41,8 +39,6 @@ public class NetworkUtils {
 
         } catch (IOException e) {
             e.printStackTrace();
-            Log.d(TAG, "hi fuck you");
-
         }
 
         return movies;
